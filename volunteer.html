@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RESQNET | Volunteer Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER (SAME AS INDEX) -->
+<header class="main-header">
+  <div class="logo">
+    <span class="logo-red">RESQ</span><span class="logo-blue">NET</span>
+  </div>
+  <p class="tagline">Disaster Response & Volunteer Coordination Network</p>
+</header>
+
+<!-- INTRO SECTION -->
+<section class="hero" style="padding-top: 30px;">
+  <div class="hero-text">
+    <h1>Volunteer & Report from the Ground</h1>
+    <p>
+      Thank you for stepping forward. Accurate, real-time information
+      from volunteers helps save lives and coordinate relief effectively.
+    </p>
+    <p class="danger">
+      ⚠️ Volunteering during disasters involves risk. Proceed responsibly.
+    </p>
+  </div>
+
+  <div class="hero-image">
+    <img src="volunteer.jpg" alt="Volunteers assisting during disaster">
+  </div>
+</section>
+
+<!-- VOLUNTEER REGISTRATION -->
+<section class="card">
+  <h2>🧑‍🤝‍🧑 Volunteer Registration</h2>
+  <p>Please provide accurate details. This information is kept confidential.</p>
+
+  <form id="volunteerForm">
+
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Phone Number</label>
+    <input type="tel" required>
+
+    <label>
+      <input type="checkbox" required>
+      I understand the risks involved and agree to volunteer responsibly.
+    </label>
+
+    <br><br>
+    <button class="primary-btn" type="submit">
+      Register as Volunteer
+    </button>
+
+  </form>
+</section>
+
+<!-- LOCATION SHARING -->
+<section class="card">
+  <h2>📍 Location Access</h2>
+  <p>
+    Sharing your location helps RESQNET identify nearby relief camps
+    and disaster-affected zones.
+  </p>
+
+  <button id="locationBtn" class="primary-btn">
+    Share My Current Location
+  </button>
+
+  <p id="locationStatus"></p>
+</section>
+
+<!-- DISASTER REPORTING -->
+<section class="card">
+  <h2>🚨 Disaster & Relief Information</h2>
+  <p>
+    Report observed disaster situations or available relief camps near you.
+    All submissions are reviewed before public visibility.
+  </p>
+
+  <form id="disasterForm">
+
+    <label>Is there an active disaster nearby?</label>
+    <select required>
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Type of Disaster</label>
+    <input type="text" placeholder="Flood, Fire, Earthquake" required>
+
+    <label>Severity Level</label>
+    <select required>
+      <option value="">Select</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <label>Nearest Relief Camp / Safe Location</label>
+    <input type="text" required>
+
+    <label>Urgent Needs Observed</label>
+    <textarea rows="3" required></textarea>
+
+    <button class="primary-btn" type="submit">
+      Submit Disaster Report
+    </button>
+
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    ⚠️ RESQNET is a coordination platform and does not replace official
+    emergency services.
+  </p>
+</footer>
+
+<script src="js/volunteer.js"></script>
+</body>
+</html>
+

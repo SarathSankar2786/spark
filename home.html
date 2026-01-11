@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResQnet | Live Safety Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- Leaflet Map (FREE & No API Key) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<!-- MORE OPTIONS ICON -->
+<div id="moreIcon" class="more-icon" onclick="toggleMorePanel()">☰</div>
+
+<!-- MORE OPTIONS PANEL -->
+<div id="morePanel" class="more-panel hidden">
+    <h3>🚨 Emergency & Safety</h3>
+
+    <div class="more-item">
+    🏥 <strong>Nearby Government Medical Colleges</strong>
+
+        <div id="medicalMap"></div>
+
+        <p id="safeLocations">
+        Fetching nearby government medical colleges...
+        </p>
+    </div>
+
+
+    <div class="more-item">
+        🏢 <strong>Control Room</strong>
+        <p>Disaster Control Room: <a href="tel:1077">1077</a></p>
+    </div>
+
+    <div class="more-item">
+        🚑 <strong>Ambulance</strong>
+        <p>Emergency Ambulance: <a href="tel:108">108</a></p>
+    </div>
+
+    <div class="more-item">
+        📞 <strong>Helplines</strong>
+        <p>
+            Police: <a href="tel:100">100</a><br>
+            Fire: <a href="tel:101">101</a><br>
+            National Emergency: <a href="tel:112">112</a>
+        </p>
+    </div>
+
+    <button onclick="toggleMorePanel()">Close</button>
+</div>
+
+<header>
+    <h1>🌍 ResQnet</h1>
+    <p>Live Environmental & Disaster Safety Network</p>
+</header>
+
+<main>
+
+<section class="dashboard">
+
+    <div class="card">
+        <h3>🌬️ Wind Speed</h3>
+        <p><span id="wind">--</span> km/h</p>
+        <span id="windStatus" class="badge">--</span>
+    </div>
+
+    <div class="card">
+        <h3>🌡️ Temperature</h3>
+        <p><span id="temp">--</span> °C</p>
+        <span id="tempStatus" class="badge">--</span>
+    </div>
+
+    <div class="card">
+        <h3>💧 Humidity</h3>
+        <p><span id="humidity">--</span> %</p>
+        <span id="humidityStatus" class="badge">--</span>
+    </div>
+
+    <div class="card">
+        <h3>🌊 Sea Level Pressure</h3>
+        <p><span id="sea">--</span> hPa</p>
+        <span id="seaStatus" class="badge">--</span>
+    </div>
+
+    <div class="card">
+        <h3>🌎 Seismic Activity</h3>
+        <p>Magnitude <span id="seismic">--</span></p>
+        <span id="seismicStatus" class="badge">--</span>
+    </div>
+
+</section>
+
+<section id="overallStatus" class="overall">
+    Loading safety status...
+</section>
+
+<footer>
+    <button onclick="goToHelp()"><a href="sos.html">goToHelp</a></button>
+    <button onclick="goToVolunteer()"><a href="index.html">volunteer sign in</a></button>
+</footer>
+
+
+</main>
+
+<script src="home.js"></script>
+</body>
+</html>

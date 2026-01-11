@@ -1,0 +1,234 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("https://www.summitcpa.net/hubfs/tornada_19246.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #333;
+}
+
+/* Main container feel */
+h1 {
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph text */
+p {
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #8f0000;
+}
+
+/* Form styling */
+form {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Checkbox alignment */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Divider */
+hr {
+    margin: 40px 0;
+}
+
+
+
+.primary-btn {
+  display: inline-block;
+  background: #8b0000;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("https://www.summitcpa.net/hubfs/tornada_19246.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #1d1b1b;
+}
+
+/* HEADER */
+.main-header {
+  background: linear-gradient(90deg, #8b0000, #003366);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.logo-red {
+  color: #ffdddd;
+}
+
+.logo-blue {
+  color: #d6ecff;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  color: #8b0000;
+}
+
+.hero-image img {
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+.primary-btn {
+  display: inline-block;
+  background: #8b0000;
+  color: white;
+  padding: 14px 24px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  background: #600000;
+}
+
+/* INFO SECTION */
+.info-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: rgb(255, 253, 253);
+  width: 220px;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background: #000000;
+  color: #ebebeb;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+
+
+.tagline {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+
+
+
+/* SECTION BACKGROUNDS FOR VISUAL RHYTHM */
+.section-light {
+  background: #f9fbfd;
+  padding: 30px 0;
+}
+
+.section-tint {
+  background: #eef3f8;
+  padding: 30px 0;
+}
+.tagline {
+  text-align: center;
+}

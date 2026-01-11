@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Emergency SOS | Disaster Response</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #b71c1c;
+    margin-bottom: 10px;
+  }
+
+  p.sub {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  input:focus, select:focus {
+    outline: none;
+    border-color: #1976d2;
+  }
+
+  .consent {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+    background: #d32f2f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #b71c1c;
+  }
+
+  #status {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🚨 Emergency SOS</h1>
+  <p class="sub">This request will be sent to official disaster response teams.</p>
+
+  <form id="sosForm">
+    <label>Phone Number</label>
+    <input type="tel" id="phone" required>
+
+    <label>Type of Emergency</label>
+    <select id="emergency">
+      <option>Medical</option>
+      <option>Flood</option>
+      <option>Fire</option>
+      <option>Heatwave</option>
+      <option>Shelter Needed</option>
+    </select>
+
+    <label>Number of People Affected</label>
+    <input type="number" id="people" min="1" value="1">
+
+    <div class="consent">
+      <input type="checkbox" required>
+      I understand this is an emergency request.
+    </div>
+
+    <button class="btn" type="submit">SEND SOS</button>
+  </form>
+
+  <div id="status"></div>
+
+  <footer>
+    This platform assists emergency coordination. Call local emergency numbers if possible.
+  </footer>
+</div>
+
+<script>
+let latitude = null;
+let longitude = null;
+
+navigator.geolocation.getCurrentPosition(
+  pos => {
+    latitude = pos.coords.latitude;
+    longitude = pos.coords.longitude;
+  }
+);
+
+document.getElementById("sosForm").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const data = {
+    phone: phone.value,
+    emergency: emergency.value,
+    people: people.value,
+    lat: latitude,
+    lon: longitude
+  };
+
+  const res = await fetch("http://localhost:3001/sos", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  document.getElementById("status").innerText = result.message;
+});
+</script>
+
+</body>
+</html>
+

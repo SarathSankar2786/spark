@@ -8,7 +8,7 @@
 
 ## 📌 Team Information
 
-- **Team Name:**  
+- **Team Name:**SPARK  
 - **Team Members:**  
   - Member 1 – Register No  
   - Member 2 – Register No  
